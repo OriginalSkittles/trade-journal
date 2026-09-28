@@ -6,6 +6,7 @@ import { londonStrategicEdge } from "./london-strategic-edge";
 import { alpaca } from "./alpaca";
 import { binance, coinbase } from "./public-crypto";
 import { oanda } from "./oanda";
+import { polygon } from "./polygon";
 import { csvDatasets, marketCsv } from "./csv";
 import { MarketDataError, type MarketDataProvider } from "./provider";
 const providers: MarketDataProvider[] = [
@@ -14,6 +15,7 @@ const providers: MarketDataProvider[] = [
   binance,
   coinbase,
   oanda,
+  polygon,
   marketCsv,
 ].sort((a, b) => a.name.localeCompare(b.name));
 export const providerFor = (id: string) => {
