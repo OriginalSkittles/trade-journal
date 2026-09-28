@@ -46,6 +46,15 @@ export const MARKET_PROVIDERS: ProviderInfo[] = [
     ],
   },
   {
+    id: "polygon",
+    name: "Polygon.io",
+    mode: "credentials",
+    description:
+      "US stock candles from Polygon.io aggregates. Unadjusted prices, extended hours included; history depth depends on your plan.",
+    symbolHint: "Use the ticker as Polygon lists it: AAPL, BRK.B.",
+    fields: [{ key: "apiKey", label: "API key", environmentKey: "POLYGON_API_KEY" }],
+  },
+  {
     id: "binance",
     name: "Binance",
     mode: "public",
