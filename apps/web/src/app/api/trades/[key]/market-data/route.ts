@@ -71,6 +71,11 @@ export const POST = handler(
             (body.dataset === "crypto" ? row.assetClass === "crypto" : row.assetClass === "equity"),
           "Choose the Alpaca dataset that matches this trade's asset class.",
         );
+      if (provider.id === "polygon")
+        requireValue(
+          row.assetClass == null || row.assetClass === "equity",
+          "Polygon.io is set up for US stocks. Choose an equity trade.",
+        );
       if (provider.id === "oanda")
         requireValue(
           row.assetClass == null || ["forex", "cfd"].includes(row.assetClass),
